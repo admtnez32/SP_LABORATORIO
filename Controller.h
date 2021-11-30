@@ -20,3 +20,5 @@ int controller_sortLibrosByEditorial(LinkedList* pArrayList);
 int controller_saveAsText(char* path , LinkedList* this, LinkedList* thisE);
 int controller_countEditorialConMasLibros(LinkedList* this, LinkedList* thisEditorial);
 int controller_addLibro(LinkedList* this, LinkedList* thisEditorial);
+
+int controller_map(LinkedList* this, LinkedList* thisE);

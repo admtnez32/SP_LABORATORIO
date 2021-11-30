@@ -56,4 +56,4 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
 LinkedList* ll_filter(LinkedList* this, int (*fn)(void* element));
 int ll_countEditorialMinotauro(LinkedList* this, int (*fn)(void* element));
 int ll_countEditorial(LinkedList* this, int (*fn)(void* element, int id), int idEditorial);
-
+LinkedList* ll_map(LinkedList* this, int (*fn)(void* element));

@@ -42,4 +42,6 @@ int libros_countEditorial(void* element, int id);
 int libros_countEditorialMinotauro(void* element);
 
 eLibro* libros_addLibro(LinkedList* this, LinkedList* thisEditorial);
+
+int libros_aplicarDescuento(void* element);
 #endif /* LIBRO_H_ */

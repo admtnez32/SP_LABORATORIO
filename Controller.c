@@ -245,7 +245,24 @@ int controller_addLibro(LinkedList* this, LinkedList* thisEditorial)
 }
 
 
+int controller_map(LinkedList* this, LinkedList* thisE)
+{
+	int retorno = -1;
+	LinkedList* aux = NULL;
 
+	if(this != NULL && thisE != NULL)
+	{
+		aux = ll_map(this, libros_aplicarDescuento);
+
+		if(aux != NULL)
+		{
+			controller_saveAsText("mapeado.csv", aux, thisE);
+		}
+
+	}
+
+	return retorno;
+}
 
 
 

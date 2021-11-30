@@ -649,8 +649,33 @@ int ll_countEditorial(LinkedList* this, int (*fn)(void* element, int id), int id
 return retorno;
 }
 
+/*
+Desarrollar la función ll_map en la biblioteca linkedList, la cual recibirá la lista y una función.
+La función ll_map ejecutará la función recibida como parámetro por cada ítem de la lista, de
+este modo se realizarán descuentos a los precios según se detalla:
+* PLANETA: 20% (si el monto es mayor o igual a $300)
+* SIGLO XXI EDITORES: 10% (si el monto es menor o igual a $200)
+ */
 
+LinkedList* ll_map(LinkedList* this, int (*fn)(void* element))
+{
+	void* pElement;
+	LinkedList* aux = NULL;
 
+	aux = ll_newLinkedList();
 
+	if(this != NULL && fn != NULL)
+	{
+		for(int i = 0; i < ll_len(this); i++)
+		{
+			pElement = ll_get(this, i);
 
+			if(fn(pElement) > -1)
+			{
+				aux = ll_clone(this);
+			}
+		}
+	}
 
+return aux;
+}

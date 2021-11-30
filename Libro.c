@@ -383,3 +383,33 @@ eLibro* libros_addLibro(LinkedList* this, LinkedList* thisEditorial)
 
 	return newLibro;
 }
+
+int libros_aplicarDescuento(void* element)
+{
+	int retorno = -1;
+	float auxPrecio;
+
+	eLibro* aux = NULL;
+
+	aux = (eLibro*) element;
+
+	if(aux != NULL && aux->idEditorial == 53 && aux->precio > 300)
+	{
+		auxPrecio = aux->precio;
+		aux->precio = aux->precio * 0.8;
+		printf("\n--- Descuento del 20 aplicado al libro %s---\nPrecio anterior: $%.2f\nPrecio actual $%.2f\n\n", aux->titulo, auxPrecio, aux->precio);
+		retorno = 0;
+	}
+	else
+	{
+		if(aux != NULL && aux->idEditorial == 55 && aux->precio > 200)
+		{
+			auxPrecio = aux->precio;
+			aux->precio = aux->precio * 0.9;
+			printf("\n--- Descuento del 10 aplicado al libro %s---\nPrecio anterior: $%.2f\nPrecio actual $%.2f\n\n", aux->titulo, auxPrecio, aux->precio);
+			retorno = 1;
+		}
+	}
+
+	return retorno;
+}

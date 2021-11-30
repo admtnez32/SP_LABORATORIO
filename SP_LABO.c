@@ -25,7 +25,6 @@ int main(void) {
 	int opcion;
 	int flagLibros = 0;
 	int flagEditorial = 0;
-	int cantidad;
 	char archivo[TAM];
 
 	eEditorial* prueba;
@@ -115,25 +114,14 @@ int main(void) {
 					break;
 
 				case 6:
-					cantidad = ll_countEditorialMinotauro(libros, libros_countEditorialMinotauro);
-
-					if(cantidad != -1)
+					if(flagLibros && flagEditorial)
 					{
-						printf("\nCantidad de libros de la editorial MINOTAURO: %d\n\n", cantidad);
+						controller_map(libros, editoriales);
 					}
 					else
 					{
-						printf("\nNo hay libros de la editorial Minotauro\n\n");
+						printf("\n--- No hay datos cargados ---\n");
 					}
-					break;
-
-				case 7:
-					controller_ListEditoriales(editoriales);
-					//controller_countEditorialConMasLibros(libros, editoriales);
-					break;
-
-				case 8:
-					controller_addLibro(libros, editoriales);
 					break;
 
 				case 0:

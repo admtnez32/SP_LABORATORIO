@@ -9,7 +9,8 @@ void MenuPrincipal(void)
 		 " 2. Cargar los datos de las EDITORIALES desde el archivo.\n"
 		 " 3. Ordenar libros según autor.\n"
 		 " 4. Imprimir libros\n"
-		 " 5. Listado de libros de editorial MINOTAURO\n\n"
+		 " 5. Listado de libros de editorial MINOTAURO\n"
+		 " 6. Listado de libros mapeados\n\n"
 		 " 0. Salir\n\n"
 		"*********************************************************************************\n\n");
 }
